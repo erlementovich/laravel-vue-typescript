@@ -11,13 +11,13 @@ const path = require('path');
  |
  */
 
-mix.ts('resources/assets/main.ts', 'public/js')
+mix.ts('resources/src/main.ts', 'public/js')
     .sourceMaps()
     .webpackConfig({
         resolve: {
             alias: {
                 // vue$: path.resolve('vue/dist/vue.runtime.esm.js'),
-                '@': path.resolve(__dirname, 'resources/assets/'),
+                '@': path.resolve(__dirname, 'resources/src/'),
             },
             extensions: ["*", ".js", ".jsx", ".vue", ".ts", ".tsx"]
         },
@@ -45,5 +45,5 @@ mix.ts('resources/assets/main.ts', 'public/js')
         host: process.env.APP_URL,
         proxy: process.env.APP_URL,
     })
-    .sass('resources/js/assets/styles/main.scss', 'public/css')
+    .sass('resources/src/assets/styles/main.scss', 'public/css')
     .sourceMaps();
