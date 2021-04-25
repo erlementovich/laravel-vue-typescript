@@ -1,48 +1,10 @@
 <template>
     <div>
-        <div class="text-center">
-            <v-dialog
-                v-model="dialog"
-                width="500"
-            >
-                <template v-slot:activator="{ on, attrs }">
-                    <v-btn
-                        color="red lighten-2"
-                        dark
-                        v-bind="attrs"
-                        v-on="on"
-                    >
-                        Click Me
-                    </v-btn>
-                </template>
-
-                <v-card>
-                    <v-card-title class="headline grey lighten-2">
-                        Privacy Policy
-                    </v-card-title>
-
-                    <v-card-text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </v-card-text>
-
-                    <v-divider></v-divider>
-
-                    <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-btn
-                            color="primary"
-                            text
-                            @click="dialog = false"
-                        >
-                            I accept
-                        </v-btn>
-                    </v-card-actions>
-                </v-card>
-            </v-dialog>
+        <div class="cards">
+            <Card class="card-item" v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :key="item"/>
+        </div>
+        <div>
+            <TestForm/>
         </div>
     </div>
 </template>
@@ -52,15 +14,24 @@
 
     import ExampleComponent from "@/ui/components/example/ExampleComponent.vue";
     import IconExampleName from "@/ui/icons/IconExampleName.vue";
+    import Card from "@/ui/components/card/Card.vue";
+    import TestForm from "@/ui/components/forms/TestForm.vue";
 
     @Component({
-        components: {IconExampleName, ExampleComponent}
+        components: {TestForm, Card, IconExampleName, ExampleComponent}
     })
     export default class Main extends Vue {
-        public dialog = false;
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-gap: 1.5em;
 
+        .card-item {
+            width: 100%;
+        }
+    }
 </style>

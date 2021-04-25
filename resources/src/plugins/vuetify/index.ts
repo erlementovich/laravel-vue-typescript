@@ -8,6 +8,9 @@ Vue.use(Vuetify);
 
 export const vuetify = new Vuetify({
     lang: {
-        locales: { ru },
+        locales: {ru},
+    },
+    icons: {
+        iconfont: 'mdi', // default - only for display purposes
     },
 });

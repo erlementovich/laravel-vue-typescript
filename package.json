@@ -38,6 +38,7 @@
         "vue-property-decorator": "^9.1.2",
         "vue-router": "^3.5.1",
         "vuelidate": "^0.7.6",
+        "vuelidate-property-decorators": "^1.0.28",
         "vuex-module-decorators": "^1.0.1"
     }
 }
