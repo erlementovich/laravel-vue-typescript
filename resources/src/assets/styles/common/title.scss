@@ -1,0 +1,25 @@
+.title {
+    font-size: 24px;
+    line-height: 140.62%;
+
+    &_lt {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &_sm {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &_md {
+        font-size: 36px;
+        line-height: 44px;
+
+    }
+
+    &_lg {
+        font-size: 48px;
+        line-height: 58px;
+    }
+}

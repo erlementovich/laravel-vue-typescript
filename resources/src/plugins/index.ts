@@ -1,1 +1,2 @@
-export const plugins = {}
+import '@/plugins/http'
+import '@/plugins/auth'

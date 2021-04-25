@@ -1,7 +1,10 @@
 <template>
-    <div class="app">
-        <router-view/>
-    </div>
+    <v-app class="application">
+        <v-main>
+            <router-view/>
+        </v-main>
+    </v-app>
+
 </template>
 
 <script lang="ts">

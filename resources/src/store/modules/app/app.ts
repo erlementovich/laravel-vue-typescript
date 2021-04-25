@@ -1,6 +1,6 @@
 import {VuexModule, Module, getModule} from 'vuex-module-decorators'
 import store from '@/store'
-import {DeviceType, IAppState} from "@/store/modules/app.type";
+import {DeviceType, IAppState} from "@/store/modules/app/app.type";
 import {getStorageItem} from "@/utils/localStorage";
 
 @Module({dynamic: true, store, name: 'app'})

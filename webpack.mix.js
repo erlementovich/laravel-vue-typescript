@@ -46,4 +46,5 @@ mix.ts('resources/src/main.ts', 'public/js')
         proxy: process.env.APP_URL,
     })
     .sass('resources/src/assets/styles/main.scss', 'public/css')
+    .copyDirectory('resources/src/assets/fonts', 'public/fonts')
     .sourceMaps();

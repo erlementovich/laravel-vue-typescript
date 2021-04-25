@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter, {RouteConfig} from 'vue-router'
+import {RouterNameEnum} from "@/router/index.types";
 
 Vue.use(VueRouter)
 
@@ -11,7 +12,7 @@ const allRoutes: RouteConfig[] = [
         children: [
             {
                 path: 'login',
-                name: 'Login',
+                name: RouterNameEnum.Login,
                 component: () => import('@/ui/pages/auth/Login.vue'),
             },
             {
@@ -28,7 +29,7 @@ const allRoutes: RouteConfig[] = [
         children: [
             {
                 path: 'app',
-                name: 'Main',
+                name: RouterNameEnum.Main,
                 component: () => import('@/ui/pages/main/Main.vue'),
             },
         ]
@@ -36,10 +37,10 @@ const allRoutes: RouteConfig[] = [
 ]
 
 
-const router = new VueRouter({
+Vue.router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: allRoutes
 });
-
+const router = Vue.router;
 export default router;

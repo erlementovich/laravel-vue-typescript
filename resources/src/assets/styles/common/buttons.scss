@@ -1,0 +1,18 @@
+.button {
+    padding: 10px 16px;
+    background: $primary;
+    border-radius: 41px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+
+    &_dark {
+        padding: 12px 16px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(6px);
+    }
+}

@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: $font;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 1182px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
